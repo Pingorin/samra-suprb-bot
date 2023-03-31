@@ -67,7 +67,7 @@ async def start(client, message):
             return
         btn = [
             [
-                InlineKeyboardButton('👑️ Main Channel 👑️', url="https://t.me/moviescrown123"
+                InlineKeyboardButton('👑️ BACKUP CHANNEL 👑️', url="https://t.me/moviescrown123"
                 )
             ]
         ]
@@ -81,7 +81,7 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**You are not in our Back-up channel given below so you don't get the movie file...\n\nIf you want the movie file, click on the '👑️ Main Channel 👑️' button below and join our Updates channel, then click on the '🔄 Try Again' button below...\n\nThen you will get the movie files...**",
+            text="**𝐀𝐑𝐄𝐘 𝐁𝐇𝐀𝐈 𝐌𝐎𝐕𝐈𝐄 𝐂𝐇𝐀𝐈𝐘𝐄 𝐀𝐏𝐊𝐎 𝐍𝐈𝐂𝐇𝐄 𝐃𝐄𝐊𝐇𝐎 𝐁𝐀𝐂𝐊𝐔𝐏 𝐂𝐇𝐀𝐍𝐄𝐋 𝐊𝐀 𝐁𝐔𝐓𝐓𝐎𝐍 𝐔𝐒𝐊𝐎 𝐓𝐀𝐏 𝐊𝐑𝐎 𝐎𝐑 𝐉𝐎𝐈𝐍 𝐊𝐑𝐎 𝐔𝐒𝐊𝐄 𝐁𝐀𝐀𝐃 𝐓𝐑𝐘 𝐀𝐆𝐀𝐈𝐍 𝐊𝐑𝐎 𝐄𝐍𝐉𝐎𝐘 https://t.me/moviescrown123**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
@@ -145,7 +145,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton("JOIN", url="https://t.me/moviescrown123")
+                          InlineKeyboardButton("MAIN CHANNEL", url="https://t.me/moviescrown123")
                          ]
                         ]
                     )
@@ -161,7 +161,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton("JOIN", url="https://t.me/moviescrown123")
+                          InlineKeyboardButton("MAIN CHANNEL", url="https://t.me/moviescrown123")
                          ]
                         ]
                     )
@@ -259,7 +259,7 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton("JOIN", url="https://t.me/moviescrown123")
+                      InlineKeyboardButton("MAIN CHANNEL", url="https://t.me/moviescrown123")
                      ]
                     ]
                 )
@@ -309,7 +309,7 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
              [
-              InlineKeyboardButton("JOIN", url="https://t.me/moviescrown123")
+              InlineKeyboardButton("MAIN CHANNEL", url="https://t.me/moviescrown123")
              ]
             ]
         )
