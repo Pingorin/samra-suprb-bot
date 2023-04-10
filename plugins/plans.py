@@ -105,5 +105,4 @@ async def cb_handler(client: Client, query: CallbackQuery):
             pass
 
     elif query.data=="alert_msg":
-            await app.answer_callback_query("ᴛʜᴇsᴇ ᴀʀᴇ ᴀʟʟ ᴛʜᴇ ᴘʟᴀɴs ᴀᴠᴀɪʟᴀʙʟᴇ !\nᴋɪɴᴅʟʏ ᴄᴏɴᴛᴀᴄᴛ ᴀᴅᴍɪɴ ᴛᴏ ᴀᴄᴛɪᴠᴀᴛᴇ ᴏɴᴇ.@Priyanka_samrottbot", show_alert=True)
-
+            await app.answer_callback_query(CallbackQuery.id, text="Test", show_alert=True)
