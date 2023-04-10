@@ -87,8 +87,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
            ]
         reply_markup = InlineKeyboardMarkup(buttons)
         try:
-            await query.edit_message_photo((QR_IMG),
-                text=(HOW_TO_PAY).format(query.from_user.first_name, query.from_user.id),
+            await message.reply_photo((QR_IMG),
+                caption=(HOW_TO_PAY),
                 reply_markup=reply_markup
             )
         except MessageNotModified:
