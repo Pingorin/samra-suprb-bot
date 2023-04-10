@@ -36,7 +36,7 @@ async def start_(client: Client, message: Message):
             InlineKeyboardButton("sɪʟᴠᴇʀ - 39ʀs|1 ᴍᴏɴᴛʜ", callback_data=f"alert_msg")
         ],
         [
-            InlineKeyboardButton("ᴘʟᴀᴛɪɴᴜᴍ - 99ʀs|3 ᴍᴏɴᴛʜs", callback_data="alert_msg"),            
+            InlineKeyboardButton("ᴘʟᴀᴛɪɴᴜᴍ - 99ʀs|3 ᴍᴏɴᴛʜs", callback_data="alert_msg2"),            
         ],
         [
             InlineKeyboardButton("ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ", url="https://t.me/Priyanka_samrottbot"),
@@ -56,7 +56,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("sɪʟᴠᴇʀ - 39ʀs|1 ᴍᴏɴᴛʜ", callback_data=f"alert_msg")
         ],
         [
-            InlineKeyboardButton("ᴘʟᴀᴛɪɴᴜᴍ - 99ʀs|3 ᴍᴏɴᴛʜs", callback_data="alert_msg"),            
+            InlineKeyboardButton("ᴘʟᴀᴛɪɴᴜᴍ - 99ʀs|3 ᴍᴏɴᴛʜs", callback_data="alert_msg2"),            
         ],
         [
             InlineKeyboardButton("ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ", url="https://t.me/Priyanka_samrottbot"),
@@ -105,4 +105,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             pass
 
     elif query.data=="alert_msg":
+            await callback_query.answer("This is an alert message", show_alert=True)
+
+    elif query.data=="alert_msg2":
             await callback_query.answer("This is an alert message", show_alert=True)
