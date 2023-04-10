@@ -105,4 +105,4 @@ async def cb_handler(client: Client, query: CallbackQuery):
             pass
 
     elif query.data=="alert_msg":
-            await Client.answer_callback_query(CallbackQuery.answer, text="Test", show_alert=True)
+            await callback_query.answer("This is an alert message", show_alert=True)
