@@ -105,7 +105,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             pass
 
     elif query.data=="alert_msg":
-            await query.answer("Contact admin to activate any pannel !", show_alert=True)
+            await query.answer("ᴄᴏɴᴛᴀᴄᴛ ᴀᴅᴍɪɴ ᴛᴏ ᴀᴄᴛɪᴠᴀᴛᴇ ᴀɴʏ ᴘᴀɴɴᴇʟ !", show_alert=True)
 
     elif query.data=="alert_msg2":
-            await query.answer("Contact admin to activate any pannel !", show_alert=True)
+            await query.answer("ᴄᴏɴᴛᴀᴄᴛ ᴀᴅᴍɪɴ ᴛᴏ ᴀᴄᴛɪᴠᴀᴛᴇ ᴀɴʏ ᴘᴀɴɴᴇʟ !", show_alert=True)
