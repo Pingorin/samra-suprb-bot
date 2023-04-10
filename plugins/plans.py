@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import MessageNotModified
-
+from info import PREMIUM_IDS as sudo
 
 PLANS_IMG = "https://graph.org/file/de9b8d53bd8a786f37029.jpg"
 QR_IMG = "https://i.imgur.com/V7zNCu5.jpg"
@@ -21,8 +21,21 @@ HOW_TO_PAY = """
 » sᴛᴇᴘ 𝟷 : sᴄᴀɴ ʙᴀʀ ᴄᴏᴅᴇ ᴏʀ ᴘᴀʏ ᴏɴ ᴛʜɪs ᴜᴘɪ : <code> 8194994597@paytm </code>
 » sᴛᴇᴘ 𝟸 : sᴇɴᴅ ᴘᴀʏᴍᴇɴᴛ sᴄʀᴇᴇɴsʜᴏᴛ ᴏɴ ʜᴇʀᴇ : @Priyanka_samrottbot
 » sᴛᴇᴘ 𝟹 : ɪ ᴡɪʟʟ ᴀᴅᴅ ʏᴏᴜʀ ᴘʟᴀɴ ɪɴsᴛᴀɴᴛ
-""" 
+"""
+
    
+
+
+@Client.on_message(filters.command(["checkmyplan","Checkmyplan"], prefixes=["/", "!"]))
+async def start_(client: Client, message: Message):
+    sender = message.from_user 
+    if message.from_user.id in sudo: 
+       await message.reply("ʜᴇʏ, ʏᴏᴜʀ ᴘʟᴀɴ ɢᴏᴛ ᴇxᴘɪʀᴇᴅ ! ᴋɪɴᴅʟʏ ᴛᴀᴋᴇ ᴀ ɴᴇᴡ ᴘʟᴀɴ ʙʏ ᴄᴏɴᴛᴀᴄᴛɪɴɢ ᴍʏ ᴀᴅᴍɪɴ ᴛᴏ ᴄʜᴇᴄᴋ ᴀʟʟ ᴀᴠᴀɪʟᴀʙʟᴇ ᴘʟᴀɴs, ᴜsᴇ /plans ᴄᴏᴍᴍᴀɴᴅ.")
+
+    if message.from_user.id not in sudo:
+        await mesaage.reply(("ʏᴏᴜʀ ᴘʟᴀɴ ɪs ᴀᴠᴀɪʟᴀʙʟᴇ. ʏᴏᴜ ᴀʀᴇ 🤭 [ᴘʀᴇᴍɪᴜᴍ](tg://user?id={}) ᴘᴇʀsᴏɴ.").format(sender.id))
+
+
 
 @Client.on_message(filters.command(["plans","Plans"], prefixes=["/", "!"]))
 async def start_(client: Client, message: Message):
