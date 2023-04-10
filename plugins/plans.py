@@ -9,20 +9,20 @@ from info import PREMIUM_IDS as sudo
 PLANS_IMG = "https://graph.org/file/de9b8d53bd8a786f37029.jpg"
 
  
-PLANS_TEXT = """
+PLANS_TEXT = """<u>
 ᴛʜᴇsᴇ ᴀʀᴇ ᴀʟʟ ᴛʜᴇ ᴘʟᴀɴs ᴀᴠᴀɪʟᴀʙʟᴇ !
-ᴋɪɴᴅʟʏ ᴄᴏɴᴛᴀᴄᴛ ᴀᴅᴍɪɴ ᴛᴏ ᴀᴄᴛɪᴠᴀᴛᴇ ᴏɴᴇ.
-@Priyanka_samrottbot
+ᴋɪɴᴅʟʏ ᴄᴏɴᴛᴀᴄᴛ ᴀᴅᴍɪɴ ᴛᴏ ᴀᴄᴛɪᴠᴀᴛᴇ ᴏɴᴇ.</u>
+[ᴄʟɪᴄᴋ](https://t.me/Priyanka_samrottbot)
 """
 
 HOW_TO_PAY = """
 <u>ʜᴏᴡ ᴛᴏ ᴘᴀʏ ᴍᴏɴᴇʏ</u>
 
-» sᴛᴇᴘ 𝟷 : sᴄᴀɴ ʙᴀʀ ᴄᴏᴅᴇ ᴏʀ ᴘᴀʏ ᴏɴ ᴛʜɪs ᴜᴘɪ : <code> 8194994597@paytm </code>
+<code>» sᴛᴇᴘ 𝟷 : sᴄᴀɴ ʙᴀʀ ᴄᴏᴅᴇ ᴏʀ ᴘᴀʏ ᴏɴ ᴛʜɪs ᴜᴘɪ</code> : <code> 8194994597@paytm </code>
 
-» sᴛᴇᴘ 𝟸 : sᴇɴᴅ ᴘᴀʏᴍᴇɴᴛ sᴄʀᴇᴇɴsʜᴏᴛ ᴏɴ ʜᴇʀᴇ : @Priyanka_samrottbot
+<code>» sᴛᴇᴘ 𝟸 : ᴄʟɪᴄᴋ ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ ʙᴜᴛᴛᴏɴ ᴀɴᴅ sᴇɴᴅ ᴘᴀʏᴍᴇɴᴛ sᴄʀᴇᴇɴsʜᴏᴛ.</code>
 
-» sᴛᴇᴘ 𝟹 : ɪ ᴡɪʟʟ ᴀᴅᴅ ʏᴏᴜʀ ᴘʟᴀɴ ɪɴsᴛᴀɴᴛ
+<code>» sᴛᴇᴘ 𝟹 : ɪ ᴡɪʟʟ ᴀᴅᴅ ʏᴏᴜʀ ᴘʟᴀɴ ɪɴsᴛᴀɴᴛ.</code>
 """
 
    
@@ -118,5 +118,5 @@ async def cb_handler(client: Client, query: CallbackQuery):
             pass
 
     elif query.data=="alert_msg":
-            await Client.answer_callback_query("ᴛʜᴇsᴇ ᴀʀᴇ ᴀʟʟ ᴛʜᴇ ᴘʟᴀɴs ᴀᴠᴀɪʟᴀʙʟᴇ !\nᴋɪɴᴅʟʏ ᴄᴏɴᴛᴀᴄᴛ ᴀᴅᴍɪɴ ᴛᴏ ᴀᴄᴛɪᴠᴀᴛᴇ ᴏɴᴇ.@Priyanka_samrottbot", show_alert=True)
+            await app.answer_callback_query("ᴛʜᴇsᴇ ᴀʀᴇ ᴀʟʟ ᴛʜᴇ ᴘʟᴀɴs ᴀᴠᴀɪʟᴀʙʟᴇ !\nᴋɪɴᴅʟʏ ᴄᴏɴᴛᴀᴄᴛ ᴀᴅᴍɪɴ ᴛᴏ ᴀᴄᴛɪᴠᴀᴛᴇ ᴏɴᴇ.@Priyanka_samrottbot", show_alert=True)
 
