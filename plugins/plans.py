@@ -12,6 +12,7 @@ QR_IMG = "https://i.imgur.com/V7zNCu5.jpg"
 PLANS_TEXT = """
 ᴛʜᴇsᴇ ᴀʀᴇ ᴀʟʟ ᴛʜᴇ ᴘʟᴀɴs ᴀᴠᴀɪʟᴀʙʟᴇ !
 ᴋɪɴᴅʟʏ ᴄᴏɴᴛᴀᴄᴛ ᴀᴅᴍɪɴ ᴛᴏ ᴀᴄᴛɪᴠᴀᴛᴇ ᴏɴᴇ.
+@Priyanka_samrottbot
 """
 
 HOW_TO_PAY = """
@@ -30,10 +31,10 @@ async def start_(client: Client, message: Message):
     reply_markup=InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("sɪʟᴠᴇʀ - 39ʀs|1 ᴍᴏɴᴛʜ", url=f"https://t.me/")
+            InlineKeyboardButton("sɪʟᴠᴇʀ - 39ʀs|1 ᴍᴏɴᴛʜ", callback_data=f"alert_msg")
         ],
         [
-            InlineKeyboardButton("ᴘʟᴀᴛɪɴᴜᴍ - 99ʀs|3 ᴍᴏɴᴛʜs", url="https://t.me/"),            
+            InlineKeyboardButton("ᴘʟᴀᴛɪɴᴜᴍ - 99ʀs|3 ᴍᴏɴᴛʜs", callback_data="alert_msg"),            
         ],
         [
             InlineKeyboardButton("ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ", url="https://t.me/Priyanka_samrottbot"),
@@ -50,10 +51,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
     if query.data=="home":
         buttons = [
         [
-            InlineKeyboardButton("sɪʟᴠᴇʀ - 39ʀs|1 ᴍᴏɴᴛʜ", url=f"https://t.me/")
+            InlineKeyboardButton("sɪʟᴠᴇʀ - 39ʀs|1 ᴍᴏɴᴛʜ", callback_data=f"alert_msg")
         ],
         [
-            InlineKeyboardButton("ᴘʟᴀᴛɪɴᴜᴍ - 99ʀs|3 ᴍᴏɴᴛʜs", url="https://t.me/"),            
+            InlineKeyboardButton("ᴘʟᴀᴛɪɴᴜᴍ - 99ʀs|3 ᴍᴏɴᴛʜs", callback_data="alert_msg"),            
         ],
         [
             InlineKeyboardButton("ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ", url="https://t.me/Priyanka_samrottbot"),
@@ -101,5 +102,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         except:
             pass
 
-
+    elif query.data=="alert_msg":
+            await Client.answer_callback_query(query_id, text=PLANS_TEXT, show_alert=True)
 
