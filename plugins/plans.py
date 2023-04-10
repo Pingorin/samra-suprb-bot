@@ -26,11 +26,10 @@ HOW_TO_PAY = """
 
 
 PLAN_EXP = """
-ʏᴏᴜʀ ᴘʟᴀɴ ɢᴏᴛ ᴇxᴘɪʀᴇᴅ !
+Hey, Your plan got expired !
 
-ᴋɪɴᴅʟʏ ᴛᴀᴋᴇ ᴀ ɴᴇᴡ ᴘʟᴀɴ ʙʏ ᴄᴏɴᴛᴀᴄᴛɪɴɢ ᴍʏ ᴀᴅᴍɪɴs ᴏʀ ᴏᴡɴᴇʀ !
-
-ᴛᴏ ᴄʜᴇᴄᴋ ᴀʟʟ ᴀᴠᴀɪʟᴀʙʟᴇ ᴘʟᴀɴs ᴊᴜsᴛ ᴄʟɪᴄᴋ ᴘʟᴀɴs ʙᴜᴛᴛᴏɴ.
+Kindly take a new plan by contacting my admin !
+To check all available plans, Use /plans command.
 """
 
 
