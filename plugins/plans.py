@@ -81,7 +81,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         "ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ", url="https://t.me/Priyanka_samrottbot"),
                 ],   
                 [   
-                    InlineKeyboardButton(" ᴄʟᴏsᴇ ", callback_data="close_data") 
+                    InlineKeyboardButton(" ᴄʟᴏsᴇ ", callback_data="close_data") ,
                     InlineKeyboardButton("⟲ ʙᴀᴄᴋ ⟳", callback_data="home")
                 ]
            ]
