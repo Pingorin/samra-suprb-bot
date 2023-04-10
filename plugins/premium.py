@@ -1,9 +1,9 @@
 import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from info import PREMIUM_IDS as sudo
+#from info import PREMIUM_IDS as sudo
 
-
+sudo = [5709622852]
 
 @Client.on_message(filters.command(["checkmyplan","Checkmyplan"], prefixes=["/", "!"]))
 async def check_(client: Client, message: Message):
