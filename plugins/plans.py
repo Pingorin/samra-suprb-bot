@@ -100,7 +100,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
            ]
         reply_markup = InlineKeyboardMarkup(buttons)
         try:
-            await message.reply_photo((QR_IMG),
+            await message.reply_photo(QR_IMG),
                 caption=(HOW_TO_PAY),
                 reply_markup=reply_markup
             )
