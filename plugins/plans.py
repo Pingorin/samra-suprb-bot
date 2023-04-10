@@ -49,7 +49,7 @@ async def start_(client: Client, message: Message):
 
 
 @Client.on_callback_query()
-async def cb_handler(client: Client, query: CallbackQuery):
+async def cb_handler(client: Client, query: CallbackQuery, callback_query):
     if query.data=="home":
         buttons = [
         [
@@ -105,7 +105,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             pass
 
     elif query.data=="alert_msg":
-            await callback_query.answer("This is an alert message", show_alert=True)
+            await callback_query.answer("Contact admin to activate any pannel !", show_alert=True)
 
     elif query.data=="alert_msg2":
-            await callback_query.answer("This is an alert message", show_alert=True)
+            await callback_query.answer("Contact admin to activate any pannel !", show_alert=True)
