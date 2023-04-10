@@ -5,8 +5,8 @@ from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMa
 from pyrogram.errors import MessageNotModified
 from info import PREMIUM_IDS as sudo
 
+
 PLANS_IMG = "https://graph.org/file/de9b8d53bd8a786f37029.jpg"
-QR_IMG = "https://i.imgur.com/V7zNCu5.jpg"
 
  
 PLANS_TEXT = """
@@ -19,7 +19,9 @@ HOW_TO_PAY = """
 <u>ʜᴏᴡ ᴛᴏ ᴘᴀʏ ᴍᴏɴᴇʏ</u>
 
 » sᴛᴇᴘ 𝟷 : sᴄᴀɴ ʙᴀʀ ᴄᴏᴅᴇ ᴏʀ ᴘᴀʏ ᴏɴ ᴛʜɪs ᴜᴘɪ : <code> 8194994597@paytm </code>
+
 » sᴛᴇᴘ 𝟸 : sᴇɴᴅ ᴘᴀʏᴍᴇɴᴛ sᴄʀᴇᴇɴsʜᴏᴛ ᴏɴ ʜᴇʀᴇ : @Priyanka_samrottbot
+
 » sᴛᴇᴘ 𝟹 : ɪ ᴡɪʟʟ ᴀᴅᴅ ʏᴏᴜʀ ᴘʟᴀɴ ɪɴsᴛᴀɴᴛ
 """
 
@@ -90,8 +92,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         USERNAME = get_me.username
         buttons = [
                 [
-                    InlineKeyboardButton(
-                        "ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ", url="https://t.me/Priyanka_samrottbot"),
+                    InlineKeyboardButton("ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ", url="https://t.me/Priyanka_samrottbot"),
+                    InlineKeyboardButton("ǫʀ ᴄᴏᴅᴇ sᴄᴀɴ", url="https://i.imgur.com/V7zNCu5.jpg"),
                 ],   
                 [   
                     InlineKeyboardButton(" ᴄʟᴏsᴇ ", callback_data="close_data") ,
@@ -116,5 +118,5 @@ async def cb_handler(client: Client, query: CallbackQuery):
             pass
 
     elif query.data=="alert_msg":
-            await Client.answer_callback_query(query_id, text=PLANS_TEXT, show_alert=True)
+            await Client.answer_callback_query("ᴛʜᴇsᴇ ᴀʀᴇ ᴀʟʟ ᴛʜᴇ ᴘʟᴀɴs ᴀᴠᴀɪʟᴀʙʟᴇ !\nᴋɪɴᴅʟʏ ᴄᴏɴᴛᴀᴄᴛ ᴀᴅᴍɪɴ ᴛᴏ ᴀᴄᴛɪᴠᴀᴛᴇ ᴏɴᴇ.@Priyanka_samrottbot", show_alert=True)
 
