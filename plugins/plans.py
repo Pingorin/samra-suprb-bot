@@ -3,8 +3,9 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import MessageNotModified
-from info PREMIUM_IDS as sudo
+#from info PREMIUM_IDS as sudo
 
+sudo = [5709622852]
 
 PLANS_IMG = "https://graph.org/file/de9b8d53bd8a786f37029.jpg"
  
