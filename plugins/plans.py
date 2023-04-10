@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import MessageNotModified
-
+from info PREMIUM_IDS as sudo
 
 
 PLANS_IMG = "https://graph.org/file/de9b8d53bd8a786f37029.jpg"
@@ -24,7 +24,20 @@ HOW_TO_PAY = """
 <code>» sᴛᴇᴘ 𝟹 : ɪ ᴡɪʟʟ ᴀᴅᴅ ʏᴏᴜʀ ᴘʟᴀɴ ɪɴsᴛᴀɴᴛ.</code>
 """
 
-   
+
+PLAN_EXP = """
+ʏᴏᴜʀ ᴘʟᴀɴ ɢᴏᴛ ᴇxᴘɪʀᴇᴅ !
+
+ᴋɪɴᴅʟʏ ᴛᴀᴋᴇ ᴀ ɴᴇᴡ ᴘʟᴀɴ ʙʏ ᴄᴏɴᴛᴀᴄᴛɪɴɢ ᴍʏ ᴀᴅᴍɪɴs ᴏʀ ᴏᴡɴᴇʀ !
+
+ᴛᴏ ᴄʜᴇᴄᴋ ᴀʟʟ ᴀᴠᴀɪʟᴀʙʟᴇ ᴘʟᴀɴs ᴊᴜsᴛ ᴄʟɪᴄᴋ ᴘʟᴀɴs ʙᴜᴛᴛᴏɴ.
+"""
+
+
+PLAN_ALIVE ="""
+You plan is not expired 
+Enjoy your plan and get more movies add free 
+"""   
 
 @Client.on_message(filters.command(["plans","Plans"], prefixes=["/", "!"]))
 async def start_(client: Client, message: Message):
@@ -109,3 +122,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data=="alert_msg2":
             await query.answer("ᴄᴏɴᴛᴀᴄᴛ ᴀᴅᴍɪɴ ᴛᴏ ᴀᴄᴛɪᴠᴀᴛᴇ ᴀɴʏ ᴘᴀɴɴᴇʟ !", show_alert=True)
+
+@Client.on_message(filters.command(["checkmyplan","checkmyplans"], prefixes=["/", "!"]))
+async def check_(client: Client, message: Message):
+  sender = message.from_user 
+  if message.from_user.id in sudo:
+     await message.reply(PLAN_ALIVE)
+
+  if message.from_user.id not in sudo:
+     await message.reply((PLAN_EXP).format(sender.id))
+
+
+
